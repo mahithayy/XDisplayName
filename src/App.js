@@ -16,37 +16,37 @@ export default function App() {
   };
 
   return (
-    <form className="App" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="firstName"
-        placeholder="First Name"
-        value={firstName}
-        onChange={(e) => setFirstName(e.target.value)}
-        required
-      />
-      <br />
-      <br />
-      <input
-        type="text"
-        name="lastName"
-        placeholder="Last Name"
-        value={lastName}
-        onChange={(e) => setLastName(e.target.value)}
-        required
-      />
-      <br />
-      <br />
-      <button type="submit">Submit</button>
+    <div className="App">
+      <h1>Full Name Display</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="firstName"
+          placeholder="First Name"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          required
+        />
+        <br />
+        <br />
+        <input
+          type="text"
+          name="lastName"
+          placeholder="Last Name"
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+          required
+        />
+        <br />
+        <br />
+        <button id="next" type="submit">Submit</button>
+      </form>
+
       <p>
         {isSubmitted
           ? `${firstName} ${lastName}`
           : "Please fill all the fields"}
       </p>
-    </form>
+    </div>
   );
 }
-
-
-
-
