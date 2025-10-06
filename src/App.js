@@ -39,14 +39,15 @@ export default function App() {
         />
         <br />
         <br />
-        <button id="next" type="submit">Submit</button>
+        <button id="next" type="submit">
+          Submit
+        </button>
       </form>
 
-      <p>
-        {isSubmitted
-          ? `${firstName} ${lastName}`
-          : "Please fill all the fields"}
-      </p>
+      {/* Only render the <p> if both fields are filled and form is submitted */}
+      {isSubmitted && firstName && lastName && (
+        <p>Full Name: {firstName} {lastName}</p>
+      )}
     </div>
   );
 }
